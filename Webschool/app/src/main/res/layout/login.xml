@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/logTotal"
+    android:background="@drawable/white_collage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="#000000"
+                android:text="Account Login"
+                android:textSize="18sp"
+                android:id="@+id/titl"
+                android:gravity="center"
+                android:layout_alignParentTop="true"/>
+
+            <!--/*  logoblue....* */-->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sammm_logo"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/ic"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/titl"/>
+
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:id="@+id/sch_co"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="School code"
+                android:textColor="#27ae60"
+                android:textSize="15sp"
+                android:gravity="center|bottom"
+                android:includeFontPadding="false"
+                android:layout_below="@+id/ic"/>
+
+            <EditText
+                android:id="@+id/school_code"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:textColor="#333333"
+                android:inputType="number"
+                android:background="@android:color/transparent"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:hint="Enter your school code"
+                android:textColorHint="#adadad"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:layout_below="@+id/sch_co"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.9dp"
+                android:background="#dddddd"
+                android:orientation="horizontal"
+                android:id="@+id/line"
+                android:layout_below="@+id/school_code"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:id="@+id/em"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Username"
+                android:textColor="#27ae60"
+                android:textSize="15sp"
+                android:gravity="center|bottom"
+                android:includeFontPadding="false"
+                android:layout_below="@+id/line"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:textColor="#333333"
+                android:background="@android:color/transparent"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:hint="Enter your username"
+                android:textColorHint="#adadad"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:layout_below="@+id/em"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.9dp"
+                android:background="#dddddd"
+                android:orientation="horizontal"
+                android:id="@+id/lin2"
+                android:layout_below="@+id/email"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:id="@+id/pas"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Password"
+                android:textColor="#27ae60"
+                android:textSize="15sp"
+                android:gravity="center|bottom"
+                android:includeFontPadding="false"
+                android:layout_below="@+id/lin2"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:textColor="#333333"
+                android:inputType="textPassword"
+                android:background="@android:color/transparent"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:hint="******"
+                android:textColorHint="#adadad"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:layout_below="@+id/pas"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.9dp"
+                android:background="#dddddd"
+                android:orientation="horizontal"
+                android:id="@+id/lin3"
+                android:layout_below="@+id/password"/>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Login"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:background="@drawable/blue_btn"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_below="@+id/lin3"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </ScrollView>
+
+<erp.skoolerp.utils.Montserrat_Regular
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:text="@string/copywrite"
+    android:textColor="#666666"
+    android:padding="7dp"
+    android:gravity="center"
+    android:visibility="visible"
+    android:id="@+id/copywrite"
+    android:background="#ffffff"/>
+
+    </RelativeLayout>

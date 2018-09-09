@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/first_lay"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/lib_img"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_circular_black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@+id/first_lay">
+
+            <LinearLayout
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#dddddd"
+                android:id="@+id/line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/second_lay"
+                android:layout_margin="15dp">
+
+                <erp.skoolerp.utils.Montserrat_Medium
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:text="ISBN Book No: 525468"/>
+
+                <erp.skoolerp.utils.Montserrat_Regular
+                    android:id="@+id/descrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="7dp"
+                    android:includeFontPadding="false"
+                    android:text="Book Name: Wings of fire"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/cal1"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:srcCompat="@drawable/ic_calendar_green"
+                        android:layout_marginEnd="5dp"
+                        android:layout_alignParentStart="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="#27ae60"
+                        android:text="23 Oct 2017"
+                        android:layout_toEndOf="@+id/cal1"
+                        android:layout_alignTop="@+id/cal1"
+                        android:includeFontPadding="false"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

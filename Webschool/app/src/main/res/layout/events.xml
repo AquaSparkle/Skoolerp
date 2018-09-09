@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <erp.skoolerp.CalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/red"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/calendar_view">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/round"/>
+
+                <erp.skoolerp.utils.Montserrat_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#666666"
+                    android:text="Holidays"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/blue"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/red">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/blue"/>
+
+                <erp.skoolerp.utils.Montserrat_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#666666"
+                    android:text="Academic events"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <erp.skoolerp.utils.Montserrat_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Events"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:id="@+id/eve"
+                android:layout_below="@+id/blue"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/eve_recyc"
+                android:layout_below="@+id/eve"
+                android:paddingBottom="30dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

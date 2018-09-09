@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/categry_list"
+        android:background="@drawable/spinner_bg"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/book_list"
+        android:background="@drawable/spinner_bg"
+        android:layout_marginTop="15dp"/>
+
+    <erp.skoolerp.utils.Montserrat_Regular
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/cal_bg"
+        android:layout_marginTop="15dp"
+        android:text="Due date"
+        android:paddingStart="15dp"
+        android:gravity="center_vertical"
+        android:textColor="#333333"
+        android:id="@+id/duedate"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:paddingBottom="15dp"
+        android:paddingStart="15dp">
+
+        <erp.skoolerp.utils.Montserrat_Medium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book details"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"/>
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ISBN NUMBER: 52548"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:id="@+id/isbn"
+            android:layout_marginTop="10dp"/>
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Number:"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:id="@+id/numbr"/>
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Author author: Name of author"
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:id="@+id/author"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="request book"
+        android:textAllCaps="true"
+        android:id="@+id/request"
+        android:textColor="#ffffff"
+        android:background="#3498db"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+</LinearLayout>

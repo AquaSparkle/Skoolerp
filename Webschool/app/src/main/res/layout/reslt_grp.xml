@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#158b48">
+
+            <erp.skoolerp.utils.Montserrat_SemiBold
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#ffffff"
+                android:text="Term 1 - Exam 1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:id="@+id/resut_title"/>
+
+    </TableRow>
+
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f2f2f2">
+
+        <erp.skoolerp.utils.Montserrat_SemiBold
+            android:id="@+id/t1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="0.4dp"
+            android:layout_height="match_parent"
+            android:background="#dddddd"/>
+
+        <erp.skoolerp.utils.Montserrat_SemiBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_weight="1.3"
+            android:padding="9dp"
+            android:id="@+id/t2"/>
+
+        <LinearLayout
+            android:layout_width="0.4dp"
+            android:layout_height="match_parent"
+            android:background="#dddddd"
+            android:id="@+id/asess_line"
+            android:orientation="vertical"/>
+
+        <erp.skoolerp.utils.Montserrat_SemiBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#333333"
+            android:id="@+id/t3"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="0.4dp"
+            android:layout_height="match_parent"
+            android:background="#dddddd"/>
+
+        <erp.skoolerp.utils.Montserrat_SemiBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#333333"
+            android:id="@+id/t4"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_weight="0.8"
+            android:padding="10dp"/>
+
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="#dddddd">
+    </LinearLayout>
+    </TableLayout>
+</LinearLayout>

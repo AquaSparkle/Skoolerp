@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:background="@drawable/blue_bgsmall">
+
+        <erp.skoolerp.utils.RoundedIV_bordered_white
+            android:id="@+id/std_pic"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/std_pic"
+            android:layout_toRightOf="@+id/std_pic"
+            android:layout_alignTop="@+id/std_pic"
+            android:layout_alignBottom="@+id/std_pic"
+            android:gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp">
+
+            <erp.skoolerp.utils.Montserrat_SemiBold
+                android:id="@+id/std_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:layout_marginTop="3dp"/>
+
+            <erp.skoolerp.utils.Montserrat_Regular
+                android:id="@+id/cours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:includeFontPadding="false"/>
+
+            <erp.skoolerp.utils.Montserrat_Regular
+                android:id="@+id/roll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:includeFontPadding="false"/>
+
+            <erp.skoolerp.utils.Montserrat_Regular
+                android:id="@+id/admn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:includeFontPadding="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Personal Information"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="#ffffff">
+
+                        <ImageView
+                            android:id="@+id/ic"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/ic_envelope_black" />
+
+                        <erp.skoolerp.utils.Montserrat_Medium
+                            android:id="@+id/head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_toEndOf="@+id/ic"
+                            android:layout_toRightOf="@+id/ic"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#f2f2f2">
+
+                        <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="8dp"
+                            android:layout_height="10dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/arrow_white"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"/>
+
+                        <erp.skoolerp.utils.Montserrat_Regular
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textColor="#666666"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:background="#f2f2f2"
+                            android:layout_toEndOf="@+id/arrow"
+                            android:layout_toRightOf="@+id/arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="#ffffff">
+
+                        <ImageView
+                            android:id="@+id/ic1"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/ic_phone_black" />
+
+                        <erp.skoolerp.utils.Montserrat_Medium
+                            android:id="@+id/head1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_toEndOf="@+id/ic1"
+                            android:layout_toRightOf="@+id/ic1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#f2f2f2">
+
+                        <ImageView
+                            android:id="@+id/arrow1"
+                            android:layout_width="8dp"
+                            android:layout_height="10dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/arrow_white"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"/>
+
+                        <erp.skoolerp.utils.Montserrat_Regular
+                            android:id="@+id/phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textColor="#666666"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:background="#f2f2f2"
+                            android:layout_toEndOf="@+id/arrow1"
+                            android:layout_toRightOf="@+id/arrow1"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="#ffffff">
+
+                        <ImageView
+                            android:id="@+id/ic2"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/ic_dob" />
+
+                        <erp.skoolerp.utils.Montserrat_Medium
+                            android:id="@+id/head2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of birth"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_toEndOf="@+id/ic2"
+                            android:layout_toRightOf="@+id/ic2"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#f2f2f2">
+
+                        <ImageView
+                            android:id="@+id/arrow2"
+                            android:layout_width="8dp"
+                            android:layout_height="10dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/arrow_white"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"/>
+
+                        <erp.skoolerp.utils.Montserrat_Regular
+                            android:id="@+id/dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textColor="#666666"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:background="#f2f2f2"
+                            android:layout_toEndOf="@+id/arrow2"
+                            android:layout_toRightOf="@+id/arrow2"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="#ffffff"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp">
+
+                        <ImageView
+                            android:id="@+id/ic3"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            app:srcCompat="@drawable/ic_placeholder" />
+
+                        <erp.skoolerp.utils.Montserrat_Medium
+                            android:id="@+id/head3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:layout_toEndOf="@+id/ic3"
+                            android:layout_toRightOf="@+id/ic3"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#f2f2f2"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp">
+
+                        <ImageView
+                            android:id="@+id/arrow3"
+                            android:layout_width="8dp"
+                            android:layout_height="10dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/arrow_white"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"/>
+
+                        <erp.skoolerp.utils.Montserrat_Regular
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textColor="#666666"
+                            android:paddingStart="20dp"
+                            android:paddingLeft="20dp"
+                            android:background="#f2f2f2"
+                            android:layout_toEndOf="@+id/arrow3"
+                            android:layout_toRightOf="@+id/arrow3"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Parents Information"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/parents1"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/parentsInfo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/p1">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Father's name:"
+                        android:id="@+id/father"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:textColor="#666666"
+                        android:background="#f2f2f2"
+                        android:id="@+id/father_name"
+                        android:padding="10dp"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/p2"
+                    android:layout_below="@+id/p1">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Mother's name:"
+                        android:id="@+id/mother"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:textColor="#666666"
+                        android:id="@+id/mother_name"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/p3"
+                    android:layout_below="@+id/p2">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Father's job:"
+                        android:id="@+id/f_job"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/father_job"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/p4"
+                    android:layout_below="@+id/p3">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Mother's job:"
+                        android:id="@+id/m_job"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/mother_job"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/p5"
+                    android:layout_below="@+id/p4">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Father's mobile:"
+                        android:id="@+id/f_mob"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/father_mob"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/p6"
+                    android:layout_below="@+id/p5">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Mother's mobile:"
+                        android:id="@+id/m_mob"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/mother_mob"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Guardians Information"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/grdn1"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/grdnInfo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g1">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Name:"
+                        android:id="@+id/gname"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/gdrn_name"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g2"
+                    android:layout_below="@id/g1">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Phone:"
+                        android:id="@+id/phn"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/phne"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g3"
+                    android:layout_below="@id/g2">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Email:"
+                        android:id="@+id/gemail"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/e_mail"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g4"
+                    android:layout_below="@id/g3">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Mobile:"
+                        android:id="@+id/mob"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/gmob"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g5"
+                    android:layout_below="@id/g4">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Relation:"
+                        android:id="@+id/reltn"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/relatn"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g6"
+                    android:layout_below="@id/g5">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Education:"
+                        android:id="@+id/ed"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/edctn"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:id="@+id/g7"
+                    android:layout_below="@id/g6">
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:text="Address:"
+                        android:id="@+id/add"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="#666666"
+                        android:id="@+id/addresss"
+                        android:padding="10dp"
+                        android:background="#f2f2f2"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

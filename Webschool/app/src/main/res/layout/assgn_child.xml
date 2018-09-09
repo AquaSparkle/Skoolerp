@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/first_lay"
+            android:padding="15dp"
+            android:background="#3498db">
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:id="@+id/sub_code"
+                android:textColor="#ffffff"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/lib_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/attach_rd"
+                android:layout_marginTop="12dp"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                android:text="Download"
+                android:id="@+id/dtext"
+                android:layout_marginTop="3dp"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@+id/first_lay"
+            android:layout_alignTop="@+id/first_lay">
+
+            <ImageView
+                android:id="@+id/arrow3"
+                android:layout_width="8dp"
+                android:layout_height="10dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/arrow_blue"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/second_lay">
+
+                <erp.skoolerp.utils.Montserrat_Medium
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="15dp"
+                    android:includeFontPadding="false"
+                    android:text="ISBN Book No: 525468"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentTop="true"/>
+
+                <erp.skoolerp.utils.Montserrat_Regular
+                    android:id="@+id/descrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="8dp"
+                    android:includeFontPadding="false"
+                    android:text="Book Name: Wings of fire"
+                    android:layout_marginStart="15dp"
+                    android:layout_below="@+id/title"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="#f2f2f2"
+                    android:layout_below="@+id/descrp"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageView
+                        android:id="@+id/cal1"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:srcCompat="@drawable/ic_calendar_green"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_centerVertical="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Medium
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:gravity="start|center"
+                        android:textColor="#27ae60"
+                        android:text="23 Oct 2017"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toEndOf="@+id/cal1"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

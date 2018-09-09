@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/h_lay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/ic_attendance"
+            android:id="@+id/h_imag"
+            android:layout_centerHorizontal="true"/>
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/h_text"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:scaleX="1"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/h_imag"
+            android:includeFontPadding="false"/>
+    </RelativeLayout>
+</LinearLayout>

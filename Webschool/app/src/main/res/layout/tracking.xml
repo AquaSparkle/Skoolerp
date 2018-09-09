@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment_view_map"
+        android:layout_width="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/text"/>
+
+    <erp.skoolerp.utils.Montserrat_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:padding="7dp"
+        android:layout_margin="15dp"
+        android:id="@+id/text"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

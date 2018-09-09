@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="#1a6fa7">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:id="@+id/yr_spinner"
+                android:background="@drawable/spinner_smallbg"
+                android:layout_marginRight="7.5dp"/>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:id="@+id/month_spinner"
+                android:background="@drawable/spinner_smallbg"
+                android:layout_marginLeft="7.5dp"/>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#158b48">
+
+                <erp.skoolerp.utils.Montserrat_SemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#ffffff"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:gravity="start|center_vertical"
+                    app:paddingStart="15dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:id="@+id/salary_title"/>
+
+            </TableRow>
+
+            <ExpandableListView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/expList"
+                android:groupIndicator="@null"
+                android:childIndicator="@null" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fcfcfc">
+
+                <erp.skoolerp.utils.Montserrat_SemiBold
+                    android:id="@+id/total_pay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="start|center_vertical"
+                    android:padding="10dp"
+                    android:text="Total: INR 0"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

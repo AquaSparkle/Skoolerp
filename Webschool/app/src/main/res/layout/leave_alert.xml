@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#33A245"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_lay">
+
+        <erp.skoolerp.utils.Montserrat_SemiBold
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave application"
+            android:textSize="14sp"
+            android:layout_marginStart="15dp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            app:srcCompat="@drawable/ic_delete_button"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"/>
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/leave_typ"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/spinner_pop_bg"
+        android:layout_below="@+id/top_lay"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/leave_typ"
+        android:id="@+id/rd_lay">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/one_dy">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/radio_sel"
+                android:layout_gravity="center"
+                android:id="@+id/one"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingLeft="7dp"
+                android:text="One day"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/mul_dy">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/radio_unsel"
+                android:layout_gravity="center"
+                android:id="@+id/mul"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingLeft="7dp"
+                android:text="Multiple days"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date_frm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/cal_popup_bg"
+        android:textSize="13sp"
+        android:hint="Date from"
+        android:layout_below="@+id/rd_lay"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/date_to"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/cal_popup_bg"
+        android:textSize="13sp"
+        android:hint="Date to"
+        android:layout_below="@+id/date_frm"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="10dp"/>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_below="@+id/date_to"-->
+        <!--android:layout_alignStart="@+id/date_to"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/laay">-->
+
+        <!--<gescis.webschool.utils.Montserrat_Medium-->
+            <!--android:id="@+id/txt"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="Total days"-->
+            <!--android:textSize="14sp"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="#333333"-->
+            <!--android:layout_marginEnd="15dp"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/total_dys"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:ems="10"-->
+            <!--android:textSize="13sp"-->
+            <!--android:inputType="number"-->
+            <!--android:background="#efefef"-->
+            <!--android:padding="10dp"/>-->
+    <!--</LinearLayout>-->
+
+
+    <EditText
+        android:id="@+id/reason"
+        android:layout_below="@+id/date_to"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#efefef"
+        android:ems="10"
+        android:textSize="13sp"
+        android:gravity="top"
+        android:padding="10dp"
+        android:hint="Reason for leave"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Submit"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:background="#3182D9"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/reason"/>
+</RelativeLayout>

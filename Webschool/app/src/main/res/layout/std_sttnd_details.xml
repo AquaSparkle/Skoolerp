@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/cours_spinner"
+                    android:background="@drawable/spinner_smallbg"
+                    android:layout_marginRight="7.5dp"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/batch_spinner"
+                    android:background="@drawable/spinner_smallbg"
+                    android:layout_marginLeft="7.5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/date_subject"
+                android:layout_margin="15dp">
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:id="@+id/sub_list"
+                    android:background="@drawable/spinner_smallbg"
+                    android:layout_marginRight="15dp"/>
+
+                <erp.skoolerp.utils.Montserrat_Medium
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:id="@+id/date_picker"
+                    android:background="@drawable/cal_bg"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#333333"
+                    android:text="Select date"/>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#158b48"
+                    android:id="@+id/list">
+
+                    <erp.skoolerp.utils.Montserrat_SemiBold
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="#ffffff"
+                        android:text="Absentees list"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="10dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#f2f2f2"
+                    android:id="@+id/label">
+
+                    <erp.skoolerp.utils.Montserrat_SemiBold
+                        android:id="@+id/montserrat_SemiBold2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="SI.No"
+                        android:textColor="#333333"
+                        android:textSize="12.5sp" />
+
+                    <LinearLayout
+                        android:layout_width="0.4dp"
+                        android:layout_height="match_parent"
+                        android:background="#dddddd"/>
+
+                    <erp.skoolerp.utils.Montserrat_SemiBold
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="#333333"
+                        android:text="Student"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:layout_weight="2"
+                        android:padding="9dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0.4dp"
+                        android:layout_height="match_parent"
+                        android:background="#dddddd"/>
+
+                    <erp.skoolerp.utils.Montserrat_SemiBold
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="#333333"
+                        android:text="Admission No."
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_weight="1.3"
+                        android:padding="10dp"/>
+
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#dddddd">
+                </LinearLayout>
+            </TableLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/absentee"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

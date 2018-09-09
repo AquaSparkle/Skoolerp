@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7.5dp"
+        android:background="#ffffff">
+
+        <erp.skoolerp.utils.RoundedIV_bordered_black
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dummy"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/std_pic_img"
+            android:layout_margin="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/list_layy"
+            android:layout_toEndOf="@+id/std_pic_img"
+            android:layout_toRightOf="@+id/std_pic_img"
+            android:layout_alignTop="@+id/std_pic_img"
+            android:layout_alignBottom="@+id/std_pic_img"
+            android:gravity="center_vertical">
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:id="@+id/std_name"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:id="@+id/adm_no"
+                android:textSize="14sp"
+                android:textColor="#27ae60"/>
+
+            <erp.skoolerp.utils.Montserrat_Regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:id="@+id/roll_no"
+                android:textSize="14sp"
+                android:textColor="#666666"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/checkbox"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/std_tick"
+            android:layout_margin="15dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

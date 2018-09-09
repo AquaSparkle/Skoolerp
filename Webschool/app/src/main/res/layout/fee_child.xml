@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/topspace"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="7.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:orientation="vertical"
+            android:background="#F5281A"
+            android:gravity="center"
+            android:id="@+id/date_lay">
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="27"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:includeFontPadding="false"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:id="@+id/month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="May"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:includeFontPadding="false"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:paddingStart="15dp"
+            android:layout_marginStart="-1dp"
+            android:background="@drawable/box_bg">
+
+            <erp.skoolerp.utils.Montserrat_SemiBold
+                android:id="@+id/tile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuition fee 1"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"/>
+
+            <erp.skoolerp.utils.Montserrat_Regular
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount: 1200"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tile"/>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:id="@+id/paytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="#F5281A"
+                android:text="Unpaid"
+                android:textSize="10sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_toEndOf="@+id/amount"
+                android:layout_below="@+id/tile"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <ImageView
+                android:id="@+id/tick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/checkbox"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7.5dp"
+        android:id="@+id/bottomspace"
+        android:orientation="horizontal"/>
+</LinearLayout>

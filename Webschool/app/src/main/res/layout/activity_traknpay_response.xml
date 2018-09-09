@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/toolbar"
+        app:contentInsetStart="0dp"
+        android:background="#7dffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Payment"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:id="@+id/nav_title"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:background="#f2f2f2">
+
+
+    </RelativeLayout>
+
+    <erp.skoolerp.utils.Montserrat_SemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:id="@+id/responseMessageView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Transaction Status: Success" />
+
+    <erp.skoolerp.utils.Montserrat_Medium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Transaction ID"
+        android:textColor="#33A245"
+        android:id="@+id/transactionIdView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Done"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:background="@drawable/blue_btn"
+        android:id="@+id/backButton"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onBackButtonClicked" />
+
+</RelativeLayout>

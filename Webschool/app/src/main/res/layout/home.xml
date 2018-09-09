@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:orientation="vertical"
+        android:id="@+id/lay1"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_pattern_small">
+
+        <erp.skoolerp.utils.Montserrat_Medium
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Select category"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:id="@+id/hscr">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/attend"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="8dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        app:srcCompat="@drawable/ic_attendance"
+                        android:id="@+id/im1"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Attendance"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im1"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/tymtable"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        app:srcCompat="@drawable/ic_timetable"
+                        android:id="@+id/im2"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time table"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im2"
+                        android:layout_marginTop="5.5dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/assgn"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="14dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_assignment"
+                        android:id="@+id/im3"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Assignment"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im3"
+                        android:layout_marginTop="3dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/fees"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/ic_fees"
+                        android:id="@+id/im4"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fees"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:gravity="center"
+                        android:layout_below="@+id/im4"
+                        android:layout_marginTop="1dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/exm"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_exam"
+                        android:id="@+id/im5"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Exams"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im5"
+                        android:layout_marginTop="3dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/lib"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        app:srcCompat="@drawable/ic_library"
+                        android:id="@+id/im6"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Library"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im6"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/trans"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        app:srcCompat="@drawable/ic_transportation"
+                        android:id="@+id/im7"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transportation"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im7"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/event"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="15dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        app:srcCompat="@drawable/ic_event"
+                        android:id="@+id/im8"
+                        android:layout_centerHorizontal="true"/>
+
+                    <erp.skoolerp.utils.Montserrat_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Events"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:scaleX="1"
+                        android:layout_below="@+id/im8"
+                        android:layout_marginTop="5dp"
+                        android:includeFontPadding="false"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+            <erp.skoolerp.utils.Montserrat_Medium
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="News feeds"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/lay2"
+                android:layout_below="@+id/scorll_lay"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/new_lay"/>
+
+
+
+</LinearLayout>

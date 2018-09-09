@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fcfcfc">
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:id="@+id/pay1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="start|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Basic pay"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="0.4dp"
+            android:layout_height="match_parent"
+            android:background="#dddddd"/>
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#666666"
+            android:text="20, 000"
+            android:textSize="13sp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="3"
+            android:id="@+id/pay1_value"/>
+
+
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="#dddddd">
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fcfcfc"
+    android:layout_marginBottom="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/feedimg"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/placelder"
+            android:layout_alignParentStart="true"/>
+
+        <erp.skoolerp.utils.Montserrat_Medium
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Neque porro quisquam est qui dolorem"
+            android:layout_alignTop="@+id/feedimg"
+            android:layout_toEndOf="@+id/feedimg"
+            android:layout_marginStart="15dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:srcCompat="@drawable/ic_calendar_green"
+            android:layout_below="@+id/title"
+            android:layout_alignStart="@+id/title"
+            android:layout_marginTop="5dp"/>
+
+        <erp.skoolerp.utils.Montserrat_Medium
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 June 2017"
+            android:textColor="#27ae60"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:layout_below="@+id/title"
+            android:layout_toEndOf="@+id/icon"
+            android:layout_alignTop="@+id/icon"
+            android:layout_alignBottom="@+id/icon"
+            android:layout_alignBaseline="@+id/icon"
+            android:layout_marginStart="5dp"
+            android:includeFontPadding="false"/>
+
+        <erp.skoolerp.utils.Montserrat_Regular
+            android:id="@+id/descrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+            android:layout_below="@+id/icon"
+            android:layout_alignStart="@+id/icon"
+            android:layout_marginTop="7dp"
+            android:textColor="#333333"
+            android:maxLines="2"
+            android:textSize="12sp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

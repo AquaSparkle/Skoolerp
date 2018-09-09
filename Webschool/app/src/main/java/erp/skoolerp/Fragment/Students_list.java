@@ -166,8 +166,8 @@ public class Students_list extends Fragment
                             }
                         }
                         // show dialog and then save
-                        showDialog();
-                        //sendAttendance();
+                        //showDialog();
+                        sendAttendance();
                     }
                 }
             }

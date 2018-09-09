@@ -24,6 +24,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -399,6 +400,10 @@ public class Std_attnd_details extends Fragment
         stringRequest.setShouldCache(false);
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                60000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
 
     private void courseListing() {
@@ -437,46 +442,117 @@ public class Std_attnd_details extends Fragment
     void studentListing() {
         data = new ArrayList<>();
 
-        Map<String, String> params = new HashMap<String, String>();
+        final Map<String, String> params = new HashMap<String, String>();
         params.put("username", Wschool.sharedPreferences.getString("userid", "0"));
         params.put("courseid", coursID);
         params.put("batchid", batchID);
         params.put("subjectid", subID);
         params.put("date", DATE);
 
-        String url = "absenteeslist";
-        new Volley_load(getActivity(), context, url, params, new Volley_load.Contents() {
-            @Override
-            public void returndata(JSONArray s) {
-                int len = s.length();
-                if(len > 0){
-                    for (int i = 0; i < s.length(); i++) {
+        String url = Wschool.base_URL+"absenteeslist";
+
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.progressdialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>()
+                {
+                    @Override
+                    public void onResponse(String response)
+                    {
+                        dialog.dismiss();
                         try
                         {
-                            JSONObject jo1 = s.getJSONObject(i);
-                            Stdlist_pojo pojo = new Stdlist_pojo();
-                            pojo.setName(jo1.getString("name"));
-                            pojo.setAdm_no(jo1.getString("st_admissionno"));
-                            data.add(pojo);
+                            JSONObject jo = new JSONObject(response);
+                            System.out.println("Volley_Resp__ "+response );
+                            String status = jo.getString("sts");
+                            if (status.equals("1"))
+                            {
 
-                        } catch (Exception e) {
+                                String attendanceStatus = jo.getString("status");
+                                if(attendanceStatus.equals("1")){
+                                    Toast.makeText(getActivity(), "All students were present.", Toast.LENGTH_SHORT).show();
+                                }else if(attendanceStatus.equals("2")){
+                                    JSONArray ja = jo.getJSONArray("rlt");
+                                    int len = ja.length();
+                                    if(len > 0){
+                                        for (int i = 0; i < ja.length(); i++) {
+                                            try
+                                            {
+                                                JSONObject jo1 = ja.getJSONObject(i);
+                                                Stdlist_pojo pojo = new Stdlist_pojo();
+                                                pojo.setName(jo1.getString("name"));
+                                                pojo.setAdm_no(jo1.getString("st_admissionno"));
+                                                data.add(pojo);
+
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                        }
+
+                                        label.setVisibility(View.VISIBLE);
+                                        absentee.setVisibility(View.VISIBLE);
+
+                                    }else{
+                                        Toast.makeText(getActivity(), "List unavailable.", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    if(adapter==null){
+                                        adapter = new StudentDetails_adap(getActivity(), data);
+                                        absentee.setAdapter(adapter);
+                                        absentee.setNestedScrollingEnabled(false);
+                                    }else{
+                                        adapter.notifyData(data);
+                                    }
+
+                                }else if(attendanceStatus.equals("3")){
+                                    Toast.makeText(getActivity(), "Attendance is not entered for selected date.", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(getActivity(), "Invalid entry.", Toast.LENGTH_SHORT).show();
+                                }
+                            } else
+                            {
+                                Toast.makeText(getActivity(), "Error.", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (Exception e)
+                        {
                             e.printStackTrace();
                         }
                     }
-                    label.setVisibility(View.VISIBLE);
-                    absentee.setVisibility(View.VISIBLE);
-                }else{
-                    Toast.makeText(getActivity(), "List unavailable.", Toast.LENGTH_SHORT).show();
-                }
-
-                if(adapter==null){
-                    adapter = new StudentDetails_adap(getActivity(), data);
-                    absentee.setAdapter(adapter);
-                    absentee.setNestedScrollingEnabled(false);
-                }else{
-                    adapter.notifyData(data);
-                }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        dialog.dismiss();
+                        if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+                            Toast.makeText(getActivity(),
+                                    "Network not connected.",
+                                    Toast.LENGTH_LONG).show();
+                        }else{
+                            Toast.makeText(getActivity(), "Error.", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                })
+        {
+            @Override
+            protected Map<String, String> getParams()
+            {
+                return params;
             }
-        });
+
+        };
+        stringRequest.setShouldCache(false);
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                60000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
 }

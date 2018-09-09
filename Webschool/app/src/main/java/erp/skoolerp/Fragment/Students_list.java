@@ -327,8 +327,12 @@ public class Students_list extends Fragment
         dialog.setContentView(R.layout.attendance_alert);
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button cancel, save;
+        cancel = (Button) dialog.findViewById(R.id.cancel);
+        save = (Button) dialog.findViewById(R.id.save);
+        save.setTypeface(Wschool.tf3);
+        cancel.setTypeface(Wschool.tf3);
         dialog.show();
-
     }
 
     public void sendAttendance() {
